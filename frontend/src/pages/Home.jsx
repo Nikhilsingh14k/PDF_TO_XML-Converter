@@ -187,6 +187,9 @@ export default function HomePage() {
     link.click();
     document.body.removeChild(link);
   };
+  useEffect(() => {
+    fetch("https://pdf-to-xml-converter-nq0n.onrender.com").catch(error => console.error("API call failed", error));
+}, []);
 
   useEffect(() => {
     fetchHistory();
